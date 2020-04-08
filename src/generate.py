@@ -57,7 +57,7 @@ class KeywordList:
         return(out)
 
 
-data = yaml.load(open("arm.yaml"))
+data = yaml.safe_load(open("arm.yaml"))
 
 keywords = KeywordList(data);
 keywords.add_all(data['instructions'])
