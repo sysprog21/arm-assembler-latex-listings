@@ -95,6 +95,7 @@ instructions:
   - BKPT
   - SWI{cond}
   - NOP
+  - LDA{cond}
   - LDR{cond}
   - LDR{cond}T
   - LDR{cond}
