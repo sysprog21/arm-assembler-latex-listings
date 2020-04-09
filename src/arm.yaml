@@ -108,6 +108,7 @@ instructions:
   - LDM{cond}<a_mode4L>
   - PLD
   - LDREX{cond}
+  - STL{cond}
   - STR{cond}
   - STR{cond}T
   - STR{cond}B
