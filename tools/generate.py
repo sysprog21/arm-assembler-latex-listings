@@ -57,7 +57,7 @@ class KeywordList:
         return(out)
 
 
-data = yaml.safe_load(open("arm.yaml"))
+data = yaml.safe_load(open("src/arm.yaml"))
 
 keywords = KeywordList(data);
 keywords.add_all(data['instructions'])
@@ -68,7 +68,7 @@ keywords2.add_all(data['directives'])
 k2 = keywords2.output('    morekeywords=[2]{')
 
 env = Environment(loader=FileSystemLoader('.'))
-template = env.get_template('lstlangarm.jinja2')
+template = env.get_template('src/lstlangarm.jinja2')
 f = open("lstlangarm.sty", mode="w")
 f.write(template.render(keywords=k1, keywords2=k2))
 f.close()
